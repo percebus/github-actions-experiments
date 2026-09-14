@@ -1,0 +1,15 @@
+name: Re-Usable workflow "A"
+
+on:
+  workflow_call: # SRC: https://docs.github.com/en/actions/using-workflows/reusing-workflows
+  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pwd
+        run: pwd
+
+      - name: echo
+        run: echo "github-actions-experiments/.../reusable_a.yml"
