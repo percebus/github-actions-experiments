@@ -8,8 +8,12 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      - name: pwd
-        run: pwd
-
       - name: echo
-        run: echo "github-actions-experiments/.../reusable_a.yml"
+        run: | 
+          pwd
+          echo "github-actions-experiments/.../reusable_a.yml"
+   
+      - name: job details
+        run: |
+          echo "job.workflow_sha: ${{ job.workflow_sha }}"
+          echo "job.workflow_repository: ${{ job.workflow_repository }}"
