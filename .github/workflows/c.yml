@@ -1,0 +1,17 @@
+name: Workflow "C"
+
+on:
+  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+
+jobs:
+  directly:
+    uses: ./.github/workflows/reusable_a.yml
+ 
+  child_a:
+    uses: percebus/github-actions/.github/workflows/reusable_a.yml@main
+
+  child_b:
+    uses: percebus/github-actions/.github/workflows/reusable_b.yml@main
+
+  child_c:
+    uses: percebus/github-actions/.github/workflows/reusable_c.yml@main
